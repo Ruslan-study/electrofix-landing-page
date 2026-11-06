@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElectroFix — ремонт и продажа электрокаров</title>
+  <meta name="description" content="Диагностика, ремонт батарей и зарядок, продажа электромобилей. Выезд и сервис в Москве.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="nav">
+    <a href="#" class="nav__logo">ELECTROFIX</a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#services">услуги</a>
+      <a href="#catalog">авто</a>
+      <a href="#contacts">контакты</a>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero__grid">
+      <h1 class="hero__title">
+        Ремонт и продажа<br>электрокаров
+      </h1>
+      <p class="hero__subtitle">
+        Диагностика&nbsp;· Батареи&nbsp;· Зарядки&nbsp;· Выезд по Минску
+      </p>
+      <div class="hero__actions">
+        <a href="#contacts" class="btn btn--primary">Записаться</a>
+        <a href="#catalog" class="btn btn--ghost">Каталог</a>
+      </div>
+      <div class="hero__meta">
+        ⚡ 11 / 2026 · Минск
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="services" id="services">
+    <div class="services__grid">
+      <article class="service">
+        <span class="service__num">[01]</span>
+        <h3 class="service__title">Диагностика</h3>
+        <p class="service__text">Компьютерная и визуальная проверка всех систем электрокара.</p>
+      </article>
+      <article class="service">
+        <span class="service__num">[02]</span>
+        <h3 class="service__title">Ремонт батарей</h3>
+        <p class="service__text">Восстановление и замена ячеек, балансировка, тесты ёмкости.</p>
+      </article>
+      <article class="service">
+        <span class="service__num">[03]</span>
+        <h3 class="service__title">Замена зарядок</h3>
+        <p class="service__text">Установка и ремонт портов и зарядных станций, адаптеры.</p>
+      </article>
+      <article class="service">
+        <span class="service__num">[04]</span>
+        <h3 class="service__title">Продажа авто</h3>
+        <p class="service__text">Проверенные электромобили с гарантией и историей обслуживания.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT / PHOTO ================= -->
+  <section class="about">
+    <div class="about__photo">
+      
+      <div class="about__photo-placeholder"><img src="image/workshop.jpg" alt="Цех ElectroFix"></div>
+    </div>
+    <div class="about__text">
+      <p class="about__quote">«От диагностики до выезда — 48 часов»</p>
+      <p class="about__desc">Работаем с Tesla, Nissan, BMW, Volkswagen и другими. Прозрачные сметы, гарантия на работы.</p>
+    </div>
+  </section>
+
+  <!-- ================= CATALOG ================= -->
+  <section class="catalog" id="catalog">
+    <h2 class="section-title">Каталог</h2>
+    <div class="catalog__grid">
+      <article class="car-card">
+        <div class="car-card__img"><img src="image/tesla.jpg" alt="Tesla Model 3"></div>
+        <div class="car-card__info">
+          <h3>Tesla Model 3</h3>
+          <p class="car-card__price">от 98000 руб. </p>
+        </div>
+      </article>
+      <article class="car-card">
+        <div class="car-card__img"><img src="image/nissan.jpg" alt="Nissan Leaf" loading="lazy"></div>
+        <div class="car-card__info">
+          <h3>Nissan Leaf</h3>
+          <p class="car-card__price">от 50750 руб.</p>
+        </div>
+      </article>
+      <article class="car-card">
+        <div class="car-card__img"><img src="image/bmw.jpg" alt="BMW i3" loading="lazy"></div>
+        <div class="car-card__info">
+          <h3>BMW i3</h3>
+          <p class="car-card__price">от 66500 руб.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= CONTACTS / FORM ================= -->
+  <section class="contacts" id="contacts">
+    <div class="contacts__info">
+      <h2 class="section-title">Контакты</h2>
+      <p class="contacts__line"><span>Тел.</span> +375(33)123-23-31</p>
+      <p class="contacts__line"><span>Адрес</span> Минск, ул. Нефтесроителей, 69</p>
+      <p class="contacts__line"><span>Часы</span> Пн–Вс · 09:00–20:00</p>
+    </div>
+
+    <form class="form" id="requestForm">
+      <input type="text" name="name" placeholder="Имя" required>
+      <input type="tel" name="phone" placeholder="Телефон" required>
+      <textarea name="message" placeholder="Что случилось?" rows="3"></textarea>
+      <button type="submit" class="btn btn--primary">Отправить</button>
+      <p class="form__status" id="formStatus"></p>
+    </form>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <span>© 2026 ELECTROFIX</span>
+    <span class="footer__mono">// сделано в портфолио</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
